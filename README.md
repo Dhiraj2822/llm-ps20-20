@@ -65,7 +65,7 @@ Most standard chatbot implementations are stateless — they forget earlier cont
 
 ```bash
 # 1. Clone or navigate to the project folder
-cd llm-ps20
+cd memory-chatbot
 
 # 2. Check Git repository status
 git status
@@ -124,7 +124,7 @@ Ollama does **not** need to be running for unit tests — LLM calls are mocked. 
 ## Project Structure
 
 ```
-llm-ps20/
+memory-chatbot/
 ├── app.py              # Streamlit UI — chat loop, session state, error handling
 ├── llm.py              # Ollama calls: stream_chat(), extract_profile(), list_models()
 ├── memory.py           # Pure-Python helpers: regex extract, merge, trim, profile_to_string
