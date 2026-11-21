@@ -149,10 +149,10 @@ memory-chatbot/
 |:---:|:---:|
 | ![Name Intro](screenshots/01_name_intro.png) | ![Preferences Saved](screenshots/02_preferences_saved.png) |
 
-| Turn 4: Vegetarian Preference Honored | Turns 5 & 6: Memory Recall |
+| Turn 3: General Query (No Memory Pollution) | Turn 4: Vegetarian Preference Honored |
 |:---:|:---:|
-| ![Vegetarian Suggestion](screenshots/03_vegetarian_suggestion.png) | ![Memory Recall](screenshots/04_memory_recall.png) |
+| ![Recursion Query](screenshots/turn3_recursion.png) | ![Vegetarian Suggestion](screenshots/03_vegetarian_suggestion.png) |
 
-| Turn 7: Memory Reset (Clean Slate) |
-|:---:|
-| ![After Clear](screenshots/05_after_clear.png) |
+| Turns 5 & 6: Session Memory Recall | Turn 7: Memory Reset (Clean Slate) |
+|:---:|:---:|
+| ![Memory Recall](screenshots/04_memory_recall.png) | ![After Clear](screenshots/05_after_clear.png) |
