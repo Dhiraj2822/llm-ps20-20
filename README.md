@@ -145,10 +145,14 @@ memory-chatbot/
 
 ## Screenshots
 
-| Turn 4: Vegetarian Preference honored | Turns 5 & 6: Memory Recall |
-|:---:|:---:|
-| ![Vegetarian Suggestion](screenshots/03_vegetarian_suggestion.png) | ![Memory Recall](screenshots/04_memory_recall.png) |
-
 | Turn 1: Name Extraction | Turn 2: Preferences Stored in Sidebar |
 |:---:|:---:|
 | ![Name Intro](screenshots/01_name_intro.png) | ![Preferences Saved](screenshots/02_preferences_saved.png) |
+
+| Turn 4: Vegetarian Preference Honored | Turns 5 & 6: Memory Recall |
+|:---:|:---:|
+| ![Vegetarian Suggestion](screenshots/03_vegetarian_suggestion.png) | ![Memory Recall](screenshots/04_memory_recall.png) |
+
+| Turn 7: Memory Reset (Clean Slate) |
+|:---:|
+| ![After Clear](screenshots/05_after_clear.png) |
