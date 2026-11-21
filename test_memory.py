@@ -45,6 +45,15 @@ class TestRegexExtract:
     def test_preference_vegetarian(self):
         result = memory.regex_extract("I'm vegetarian")
         assert any("vegetarian" in p.lower() for p in result["preferences"])
+        # Crucial: "Vegetarian" must NOT be extracted as a name!
+        assert result["name"] is None
+
+    def test_i_am_dietary_not_name(self):
+        """'I am vegan' or 'I am diabetic' must extract preference, not name."""
+        res_vegan = memory.regex_extract("I am vegan")
+        assert res_vegan["name"] is None
+        res_diabetic = memory.regex_extract("I am diabetic")
+        assert res_diabetic["name"] is None
 
     def test_preference_allergic(self):
         result = memory.regex_extract("I'm allergic to peanuts")

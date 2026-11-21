@@ -7,6 +7,8 @@ __pycache__/
 .pytest_cache/
 .streamlit/
 .vscode/
+evidence/
+submission/
 *.egg-info/
 dist/
 build/

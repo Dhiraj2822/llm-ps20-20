@@ -1,14 +1,18 @@
 # README.md
 
-# 🧠 Multi-turn Memory Chatbot
+# 🧠 Multi-turn Memory Chatbot (PS20)
 
 > A private, offline conversational AI assistant with session-aware memory and dynamic profile extraction powered by local LLMs.
 
+**Author:** Dhiraj Sarawale (Roll No: 20, Class: AIA-7)  
+**Problem Statement:** PS20: Multi-turn Memory Chatbot  
+**GitHub Repository:** [https://github.com/Dhiraj2822/llm-ps20-20](https://github.com/Dhiraj2822/llm-ps20-20)
+
 ---
 
-## Overview
+## Problem Statement
 
-Most standard chatbot implementations are stateless — they forget earlier context as conversation length increases. This system provides **multi-turn conversational memory** by tracking the conversation history and maintaining an evolving user profile (name and preferences) within the session, running completely offline with local LLMs via Ollama. No cloud APIs, credentials, or third-party tracking are required.
+Basic chatbots forget earlier messages. This chatbot remembers the conversation and the user's name and preferences within a session, using only a local LLM via Ollama — fully offline, with no cloud API and no API keys.
 
 ---
 
@@ -141,8 +145,10 @@ memory-chatbot/
 
 ## Screenshots
 
-> _Add screenshots here after running the app._
+| Turn 4: Vegetarian Preference honored | Turns 5 & 6: Memory Recall |
+|:---:|:---:|
+| ![Vegetarian Suggestion](screenshots/03_vegetarian_suggestion.png) | ![Memory Recall](screenshots/04_memory_recall.png) |
 
-| Chat with memory | Sidebar profile panel |
-|------------------|-----------------------|
-| _(screenshot)_   | _(screenshot)_        |
+| Turn 1: Name Extraction | Turn 2: Preferences Stored in Sidebar |
+|:---:|:---:|
+| ![Name Intro](screenshots/01_name_intro.png) | ![Preferences Saved](screenshots/02_preferences_saved.png) |

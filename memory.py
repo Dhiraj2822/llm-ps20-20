@@ -22,10 +22,20 @@ def empty_profile() -> Profile:
 # Regex-based extraction (layer a)
 # ---------------------------------------------------------------------------
 
+# Words that follow "I am" / "I'm" but are descriptors, diets, or states, NOT names
+_NON_NAMES = {
+    "vegetarian", "vegan", "pescatarian", "diabetic", "allergic", "gluten",
+    "a", "an", "the", "not", "so", "very", "really", "just", "doing",
+    "good", "fine", "great", "ok", "okay", "sorry", "here", "there",
+    "interested", "looking", "trying", "going", "happy", "ready", "sure",
+    "fan", "into", "fond",
+}
+
 # Patterns for name detection (case-insensitive)
 _NAME_PATTERNS = [
-    r"(?:my name is|i am|i'm|call me|you can call me)\s+([A-Za-z]+)",
+    r"(?:my name is|call me|you can call me)\s+([A-Za-z]+)",
     r"(?:actually call me|please call me)\s+([A-Za-z]+)",
+    r"(?:i am|i'm)\s+([A-Za-z]+)",
 ]
 
 # Patterns for preferences (things the user likes, hates, needs, etc.)
@@ -113,9 +123,10 @@ def regex_extract(text: str) -> Profile:
     for pattern in _NAME_PATTERNS:
         m = re.search(pattern, lower)
         if m:
-            # Capitalise properly (regex matched lowercase)
             raw_name = m.group(1).strip()
-            # Find the same span in the original text to preserve casing
+            if raw_name.lower() in _NON_NAMES:
+                continue
+            # Capitalise properly (regex matched lowercase)
             orig_m = re.search(pattern, text, re.IGNORECASE)
             if orig_m:
                 result["name"] = orig_m.group(1).strip().capitalize()
