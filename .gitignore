@@ -6,6 +6,7 @@ __pycache__/
 .env
 .pytest_cache/
 .streamlit/
+.vscode/
 *.egg-info/
 dist/
 build/
